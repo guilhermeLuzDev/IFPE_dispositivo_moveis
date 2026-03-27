@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
-import { View, TextInput, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import { FontAwesome } from '@expo/vector-icons'; // Importação do ícone
+import { View, TextInput, StyleSheet, Text, TouchableOpacity, Alert } from 'react-native';
+import { FontAwesome } from '@expo/vector-icons';
 
 export default function LoginScreen({ navigation }) {
   const [login, setLogin] = useState('');
   const [senha, setSenha] = useState('');
 
   const fazerLogin = () => {
+    if (!login || !senha) {
+      Alert.alert('Erro', 'Preencha o login e a senha!');
+      return;
+    }
     navigation.navigate('ListaContatos');
   };
 

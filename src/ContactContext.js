@@ -6,6 +6,7 @@ export const ContactProvider = ({ children }) => {
   const [contatos, setContatos] = useState([
     { id: '1', nome: 'Marcos Andrade', telefone: '81 988553424', email: 'mand@gmail.com' },
     { id: '2', nome: 'Patrícia Tavares', telefone: '81 998765332', email: 'paty@gmail.com' },
+    { id: '3', nome: 'Rodrigo Antunes', telefone: '81 987765525', email: 'rodrigo@gmail.com' },
   ]);
 
   const adicionarContato = (novoContato) => {
